@@ -7,6 +7,7 @@ import Header from './components/header/Header';
 import Homepage from './pages/homepage/Homepage';
 import Shop from './pages/shop/Shop';
 import Login from './pages/login/Login';
+import Checkout from './pages/checkout/Checkout';
 import { auth, createUserProfileDocument } from './firebase/firebase-utils';
 import { setCurrentUser } from './redux/user/user-actions'
 import { selectCurrentUser } from './redux/user/user-selector';
@@ -55,6 +56,7 @@ class App extends React.Component {
                 )
             }
           />
+          <Route exact path="/checkout" component={Checkout}/>
         </Switch>
       </div>
     );
